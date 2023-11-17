@@ -18,4 +18,5 @@ A execução é simples visto que o projeto é um webapp que utiliza apenas Java
 ![Alt text](tela/buscaPais.png)
 
 ## Vídeo
-![Alt text](tela/apresentacaoTpIndividualWebServices.mp4)
+https://github.com/carenferreira/TourMaster/assets/49703778/6ac4c217-53a1-4697-8483-aa9d6cbc05b1
+
