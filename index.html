@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     <!--Import Google Icon Font-->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!--Import materialize.css-->
+     <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css"  media="screen,projection"/>
+
+     <!--Let browser know website is optimized for mobile-->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     <style>
+        #weathermap {
+            width: 100%;
+            height: 400px;
+        }
+
+        @media (max-width: 768px) {
+            #weathermap {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-extended">
+            <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo">Tour Masters</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="index.html">City</a></li>
+                <li><a href="country.html">Country</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            </div>
+            <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+                <li class="tab"><a class="active" href="index.html">City</a></li>
+                <li class="tab"><a href="country.html">Country</a></li>
+            </ul>
+            </div>
+        </nav>
+    
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="index.html">City</a></li>
+            <li><a href="country.html">Country</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </header>
+    <main>
+        <h4>Tour Masters: all you need to know!</h4>
+
+        <div id="busca">
+            <p>Search for a city: </p>
+            <input id="city" type="text" />
+            <div id="btn"><i class="material-icons">search</i></div>
+        </div>
+    
+        <div class="container">
+            <div id="widget">
+                <div class="row">
+                    <div class="col s12 m4">
+                        <div class="card">
+                            <div class="card-image">
+                                <img id="imgFlag">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title">Country information</span>
+                                
+                                <p><i class="material-icons">flag</i> <span id="contryName"></span></p>
+                                <p><i class="material-icons">monetization_on</i> Currency: <span id="currencies"></span></p>
+                                <p><i class="material-icons">location_on</i> Capital: <span id="capital"></span></p>
+                                <p><i class="material-icons">record_voice_over</i> Idioma: <span id="language"></span></p>
+                                <p><i class="material-icons">people</i> Population: <span id="population"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="card">
+                            <div class="card-content">
+                                <span class="card-title">Wether information</span>
+                                <h5 id="tempAtual"></h5> 
+                                <p> Max: <i class="material-icons">arrow_upward</i><span id="tempMaxima"></span> </p>
+                                <p>Min: <i class="material-icons">arrow_downward</i><span id="tempMinima"></span></p>
+                                <p>Description: <span id="description"></span></p>
+                                <img id="imgWhether" style="height: 180; width: 300;" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="card">
+                            <div class="card-content">
+                                <span class="card-title">City Map</span>
+                                <div id="weathermap"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+        
+        
+    <footer class="page-footer">
+    <div class="footer-copyright">
+        <div class="container">
+        © 2023 Caren Ferreira
+        </div>
+    </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+     <!--JavaScript at end of body for optimized loading-->
+     <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     <!--Import Google Icon Font-->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!--Import materialize.css-->
+     <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css"  media="screen,projection"/>
+
+     <!--Let browser know website is optimized for mobile-->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+    <header>
+        <nav class="nav-extended">
+            <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo">Tour Masters</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="index.html">City</a></li>
+                <li><a href="country.html">Country</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            </div>
+            <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+                <li class="tab"><a class="active" href="index.html">City</a></li>
+                <li class="tab"><a href="country.html">Country</a></li>
+            </ul>
+            </div>
+        </nav>
+    
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">City</a></li>
+        <li><a href="country.html">Country</a></li>
+      </ul>
+    
+    </header>
+    <main>
+
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m12">
+                    <div class="card">
+                        <div class="card-content">
+                            <h4>Tour Masters: all you need to know!</h4>
+                            <p>If you like traveling, you know how important is to search informations about a city or country to plan your trip.
+                                By knowing this, the Tour Master helps you to find the information you need to define your first impression of 
+                                a place before deciding to visit it. Here you will find information about money, population, language, 
+                                as well as a map. Welcome to Tour Master, have a good trip!</p>
+                          </div>
+                          <div class="card-action">
+                            <a href="index.html">Search for a city</a>
+                            <a href="country.html">Search for a country</a>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    
+    <footer class="page-footer">
+          <div class="footer-copyright">
+            <div class="container">
+            © 2023 Caren Ferreira
+            </div>
+          </div>
+    </footer>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+     <!--JavaScript at end of body for optimized loading-->
+     <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+</html>
