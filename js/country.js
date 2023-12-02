@@ -1,13 +1,3 @@
-/*Bandeira
-nome
-moeda
-capital/capital info
-idioma
-população
-continente
-bandeira
- */
-/*turistas */
 var country = document.querySelector("#country");
 var btn = document.querySelector("#btn");
 
@@ -16,7 +6,6 @@ var countryName = document.querySelector("#contryName");
 var currencies = document.querySelector("#currencies");
 var continent = document.querySelector("#continent");
 var capital = document.querySelector("#capital");
-var language = document.querySelector("#language");
 var population = document.querySelector("#population");
 var imgFlag = document.querySelector("#imgFlag");
 var tourists = document.querySelector("#tourists");
@@ -43,10 +32,11 @@ btn.onclick = function(){
 
         if(resp_obj.length != 0){
             document.getElementById('widget').style.display = 'block';
+           
             //Country informations by code
             searchCountry(resp_obj[0].iso2);
-
-            tourists.innerHTML = resp_obj.tourists;
+            currencies.innerHTML = resp_obj[0].currency.name;
+            tourists.innerHTML = resp_obj[0].tourists;
         }else {
             alert("Oops! The name you wrote does not match any country :/");
         }
@@ -64,11 +54,8 @@ function searchCountry(country){
         resp_obj = JSON.parse(resp);
         
         countryName.innerHTML = resp_obj[0].name.common;
-        var coin = resp_obj[0].currencies
-        currencies.innerHTML = coin.name;
         continent.innerHTML = resp_obj[0].continents;
         capital.innerHTML = resp_obj[0].capital;
-        language.innerHTML = resp_obj[0].languages[0];
         population.innerHTML=resp_obj[0].population;
         imgFlag.src = resp_obj[0].flags.svg;
 
